@@ -9,7 +9,14 @@
     <title>Dojo Survey</title>
 </head>
 <body>
-    <form action='/process/' method="post" class="bg-dark text-warning p-4 rounded col-4 mx-auto">
+    <form action='/create/' method="post" class="bg-dark text-warning p-4 rounded col-4 mx-auto">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <h1>Dojo Survey</h1>
         <div class="form-group">
             <label for="name">Name: </label>
@@ -32,9 +39,9 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="comments">Comment (optional): </label>
-            <textarea name="comments" class="form-control" cols="20" rows="5"></textarea>
-            <a href="/process/"><button>Submit</button></a>  
+            <label for="comment">Comment (optional): </label>
+            <textarea name="comment" class="form-control" cols="20" rows="5"></textarea>
+            <a href="/create/"><button>Submit</button></a>  
         </div>  
     </form>
         

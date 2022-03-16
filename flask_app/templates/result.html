@@ -11,10 +11,10 @@
 <body>
     <div class="card mx-auto col-6 text-info">
         <h2 class="card-title">Submitted Info</h2>
-        <p class="car-.text">Name: {{session['name']}}</p>
-        <p class="card-text">Dojo Location: {{session['location']}}</p>
-        <p class="card-text">Favorite Language: {{session['language']}} </p>
-        <p class="card-text">Comment: session{{session['comments']}}</p>
+        <p class="car-.text">Name: {{lastdojo.name}}</p>
+        <p class="card-text">Dojo Location: {{lastdojo.location}}</p>
+        <p class="card-text">Favorite Language: {{lastdojo.language}} </p>
+        <p class="card-text">Comment: {{lastdojo.comment}}</p>
     </div>
 </body>
 </html>
